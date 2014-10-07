@@ -16,8 +16,15 @@ module Derailed
 			end
 			#env['PATH_INFO'] = '/pages/about' => PagesController.send(:about)
 			controller_class, action = get_controller_and_action(env)
-			response = controller_class.new.send(action)
-			[200, {'Content-Type' => 'text/html'}, [response]]
+			controller = controller_class.new(env)
+			response = controller_class.new(env).send(action)
+
+			if controller.get_response
+				controller.get_response
+			else
+				controller.render(action)
+				controller.get_response
+			end
 		end
 
 
