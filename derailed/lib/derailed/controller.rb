@@ -1,6 +1,5 @@
 require 'erubis'
 
-
 module Derailed
 	class Controller
 		attr_accessor :request
