@@ -1,0 +1,16 @@
+PATH
+  remote: ./derailed
+  specs:
+    derailed (0.0.1)
+      rack
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rack (1.5.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  derailed!
