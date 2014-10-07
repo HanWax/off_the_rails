@@ -1,6 +1,7 @@
 require "derailed/version"
 require 'derailed/controller.rb'
 require 'derailed/utils.rb'
+require 'derailed/dependencies.rb'
 
 module Derailed
 	class Application
